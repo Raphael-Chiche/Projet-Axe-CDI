@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/style/style.css" />
+    <link rel="stylesheet" href="../assets/style/parametre.css" />
+    <title>Réseau Social</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body id="body">
+    <a href="../index.html"><div class="navbar">Music Chat</div></a>
+    <div class="conteneurParametre">
+      <div class="divInfo">
+        <div class="formeInfo">
+          <img src="../assets/image/profil.png" alt="Profil" />
+          <p>Profil</p>
+        </div>
+
+        <div class="formeInfo">
+          <img
+            src="../assets/image/ajouter.png"
+            alt="Ajouter"
+            class="ajouter1"
+          />
+          <p>Ajouter</p>
+        </div>
+
+        <div class="formeInfo">
+          <img src="../assets/image/messagePrivé.png" alt="chat" />
+          <p>Message privé</p>
+        </div>
+
+        <div class="formeInfo">
+          <img src="../assets/image/parametre.png" alt="parametre" />
+          <p>Parametre</p>
+        </div>
+      </div>
+      <div class="paraDirection">
+        <div class="parametrePrincipaux">
+          <h3 id="idVotreCompte">Votre compte</h3>
+          <h3 id="idNotification">Notification</h3>
+          <h3>Sécurité et accès</h3>
+          <h3>Confidientialité</h3>
+          <h3>Masquer et bloquer</h3>
+        </div>
+        <div class="parametreVotreCompte">
+          <div class="flexligne adresseMail">
+            <p>Adresse mail :</p>
+            <input type="text" placeholder="r*****.ch2004@gmail.com">
+          </div>
+          <div class="flexligne nomUtilisateur">
+            <p>Nom d'utilisateur :</p>
+            <input type="text" placeholder="@RaphChiche">
+          </div>
+          <div class="flexligne telephone">
+            <p>Numéro de télephone :</p>
+            <input type="text" placeholder="06 ** ** ** 08">
+          </div>
+        </div>
+        <div class="parametreNotification">
+          <p class="activer_desactiverTXT">activer les notification</p>
+          <input type="checkbox" name="activerEtDesactiverNotif" id="notif" />
+        </div>
+      </div>
+    </div>
+    <!-- <script src="assets/javascript/java.js"></script> -->
+    <script src="../assets/javascript/parametre.js"></script>
+  </body>
+</html>

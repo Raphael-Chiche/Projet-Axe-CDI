@@ -1,0 +1,115 @@
+.tweet{
+    border: var(--blackpurple) solid 1px;
+    border-radius: 20px;
+    /* width: 100%; */
+    margin: 7px;
+    /* margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;  559e52*/ 
+    background-color: var(--white);
+    display: flex;
+    color: var(--vertfonce);
+    border-top-left-radius: 0;
+    margin-left : 5%;
+    
+}
+
+.imgprofil{
+    width: 100px;
+    
+    border-radius: 50%;
+    margin: 7px;
+}
+
+.info{
+    display: flex;
+    margin: 10px;
+}
+
+
+
+.infoTexte{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--blackpurple);
+}
+
+.contenueTweet{
+    margin: 10px;
+    color: var(--bleutravail);
+    /* border-left: black solid 3px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.boxsChat{
+    display: flex;
+    border-radius: 50%;
+    position: inherit;
+}
+
+.chatRap .boxsChat{
+    background-color:#FFADAD ;
+    width: 100px;
+    height: 100px;
+}
+
+.chatKpop .boxsChat{
+    background-color: #FFD6A5;
+    width: 100px;
+    height: 100px;
+}
+
+.chatClassique .boxsChat{
+    background-color: #FDFFB6 ;
+    width: 100px;
+    height: 100px;
+}
+
+.chatElectro .boxsChat{
+    background-color: #CAFFBF;
+    width: 100px;
+    height: 100px;
+}
+
+.chatJazz .boxsChat{
+    background-color: rgb(179, 179, 0);
+    width: 100px;
+    height: 100px;
+}
+
+.chatRock .boxsChat{
+    background-color: pink;
+    width: 100px;
+    height: 100px;
+}
+
+.chatMetal .boxsChat{
+    background-color: #A0C4FF ;
+    width: 100px;
+    height: 100px;
+}
+
+.chatPop .boxsChat{
+    background-color: rgb(201, 48, 168);
+    width: 100px;
+    height: 100px;
+}
+
+.chatChill .boxsChat{
+    background-color:#9BF6FF;
+    width: 100px;
+    height: 100px;
+}
+
+@media screen and (max-width:911px){
+   
+    .info{
+        display: block;
+        margin: 10px;
+    }
+        
+    }

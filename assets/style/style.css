@@ -1,0 +1,79 @@
+@import url(tags.css);
+@import url(contenue.css);
+@import url(conteneur.css);
+@import url(exemple_tweet.css);
+@import url(divInfo.css);
+@import url(categories.css);
+@import url(popup.css);
+@import url(flouScroll.css);
+@import url(sidnav.css);
+@import url(supprimerChat.css);
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+* {
+  font-family: "Hanken Grotesk", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+}
+a {
+  color: var(--bleutravail);
+}
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+  --vertfonce: #182d0e;
+  --vertclaire: #c8d7c6;
+  --blackpurple: #1c1018;
+  --taupe: #bfacb5;
+  --bleutravail: #5c6784;
+  --black: #000000;
+}
+
+@font-face {
+  font-family: "lostar";
+  src: url(‘../font/lostar/Lostar.ttf’) format(‘truetype’);
+}
+
+body {
+  background-color: #c8d7c6;
+}
+
+.actu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.parametre {
+  display: flex;
+  align-items: center;
+}
+.none {
+  display: none;
+}
+
+.tweetManga {
+  color: var(--white);
+  display: flex;
+}
+
+.navbar {
+  font-family: "Lostar";
+  text-align: center;
+  font-size: 80px;
+  font-style: italic;
+  background-color: var(--vertfonce);
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.flexcolonne {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexligne {
+  display: flex;
+  flex-direction: row;
+}

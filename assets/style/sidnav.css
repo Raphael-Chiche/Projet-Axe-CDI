@@ -1,0 +1,94 @@
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  background-color: var(--taupe);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .toggle-btn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left: -50px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: black;
+}
+
+.sidebar .toggle-btn span {
+  position: absolute;
+  width: 90%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar .toggle-btn span:nth-child(1) {
+  top: 10%;
+}
+.sidebar .toggle-btn span:nth-child(2) {
+  top: 50%;
+}
+.sidebar .toggle-btn span:nth-child(3) {
+  top: 90%;
+}
+
+.sidebar.active {
+  right: 0px;
+  z-index: 2;
+}
+
+.sidebar.active .toggle-btn span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.sidebar.active .toggle-btn span:nth-child(2) {
+  display: none;
+}
+.sidebar.active .toggle-btn span:nth-child(3) {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.sidenavCategorie {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+}
+
+.sidenavCategories {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+}
+
+.sidebar h3 {
+  text-align: center;
+  font-size: 30px;
+  font-style: italic;
+  font-family: "Lostar";
+  border-bottom: 2px solid var(--black);
+  border-top: 2px solid var(--black);
+  background-color: var(--blackpurple);
+  color: white;
+}
+.sidenavCategories:hover {
+  background-color: rgb(40, 151, 18);
+}
+
+@media screen and (max-width: 550px) {
+  .sidebar {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: -50%;
+    width: 50%;
+    height: 100%;
+    background-color: var(--vertfonce);
+    transition: all 0.3s ease-in-out;
+    color: white;
+  }
+}

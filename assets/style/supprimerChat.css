@@ -1,0 +1,74 @@
+.deleteChat {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.popupSupprimer {
+  background-color: #845c5ca9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 5;
+}
+
+.validator {
+  border: var(--blackpurple) solid 3px;
+  border-radius: 20px;
+  margin: 7px;
+  background-color: var(--white);
+  display: flex;
+  color: var(--vertfonce);
+  border-top-left-radius: 0;
+  padding: 50px;
+  color: var(--blackpurple);
+  font-size: 30px;
+}
+
+
+.annulerDelete {
+    width: 120px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(153, 16, 16);
+    /* background: linear-gradient(45deg, rgb(177, 13, 13), rgb(134, 7, 7)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    font-size: larger;
+    transition: 0.5s ease-out;
+  }
+  
+  .annulerDelete:hover {
+    /* background: linear-gradient(45deg,var(--black),var(--black)); */
+    background-color: var(--black);
+  
+  }
+  .validerDelete {
+    width: 120px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: rgb(16, 153, 57);
+    /* background: linear-gradient(45deg, rgb(24, 99, 5), rgb(8, 185, 52)); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    font-size: larger;
+    transition: 0.5s ;
+  }
+  
+  .validerDelete:hover {
+      /* background:linear-gradient(45deg,rgb(35, 199, 35),rgb(120, 219, 120)); */
+      background-color: rgb(0, 85, 0);
+      
+    }

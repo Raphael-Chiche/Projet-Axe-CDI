@@ -1,0 +1,109 @@
+ol {
+    list-style: none;
+  }
+
+.cat1{
+    background-color:#FFADAD ;
+}
+.cat2{
+    background-color: #FFD6A5;
+}
+.cat3{
+    background-color: #FDFFB6 ;
+}
+.cat4{
+    background-color: #CAFFBF;
+}
+.cat5{
+    background-color:rgb(179, 179, 0) ;
+}
+.cat6{
+    background-color: pink ;
+}
+.cat7{
+    background-color: #A0C4FF ;
+}
+.cat8{
+    background-color: rgb(201, 48, 168);
+}
+.cat9{
+    background-color:#9BF6FF;
+}
+.cat10{
+    background-color:grey ;
+}
+
+.div_tag{
+    border-radius: 21px;
+    background: var(--white);
+    border: var(--blackpurple) solid 1px;
+    display:flex;   
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 6px;
+    padding-right: 6px;
+    position: sticky;
+    top: 20px;
+    color: var(--bleutravail);
+    font-style: oblique;
+    font-size: larger;
+    border-top-left-radius: 0;
+}
+
+.div_tag h3{
+    color: var(--blackpurple);
+}
+.div_tag_cache{
+    border-radius: 21px;
+    background: var(--white);
+    border: var(--vertclaire) solid 3px;
+    display:none;   
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 6px;
+    padding-right: 6px;
+    position: sticky;
+    top: 20px;
+    color: var(--vertfonce);
+    font-style: oblique;
+    font-size: larger;
+    border-top-left-radius: 0;
+}
+.chatRap{
+    display: none;
+}
+
+.tagRestart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width:550px){
+    .div_tag{
+        border-radius: 21px;
+        background: var(--white);
+        border: var(--blackpurple) solid 3px;
+        display:none;   
+        margin-left: 20px;
+        margin-right: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 6px;
+        padding-right: 6px;
+        position: sticky;
+        top: 20px;
+        color: var(--bleutravail);
+        font-style: oblique;
+        font-size: larger;
+        border-top-left-radius: 0;
+    }
+}
