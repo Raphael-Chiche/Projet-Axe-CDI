@@ -8,6 +8,7 @@
 @import url(flouScroll.css);
 @import url(sidnav.css);
 @import url(supprimerChat.css);
+@import url(connexion.css);
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
 * {
   font-family: "Hanken Grotesk", sans-serif;
@@ -41,8 +42,9 @@ body {
 
 .actu {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+  flex-direction: row;
+  width: 100%; 
+  justify-content: space-between;
 }
 
 .parametre {
@@ -76,4 +78,12 @@ body {
 .flexligne {
   display: flex;
   flex-direction: row;
+}
+
+#darkbody{
+  background-color: var(--vertfonce);
+}
+
+#darknav{
+  background-color:  var(--black);
 }

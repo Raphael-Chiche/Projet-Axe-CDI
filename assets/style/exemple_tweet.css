@@ -11,6 +11,7 @@
     color: var(--vertfonce);
     border-top-left-radius: 0;
     margin-left : 5%;
+    width: 75vw;
     
 }
 
@@ -99,12 +100,20 @@
     height: 100px;
 }
 
-.chatChill .boxsChat{
+.chatFunk .boxsChat{
     background-color:#9BF6FF;
     width: 100px;
     height: 100px;
 }
 
+.contenu{
+    height: 15vw;
+    width: 30vw;
+    text-align: left;
+    padding: 3%;
+    margin-top: 5%;
+    border-radius: 10px
+}
 @media screen and (max-width:911px){
    
     .info{

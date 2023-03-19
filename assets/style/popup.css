@@ -48,10 +48,9 @@
   border: var(--blackpurple) solid 3px;
   border-radius: 20px;
   width: 50%;
+  font-size: 20px;
+  padding: 15px;
   margin: 7px;
-  /* margin-right: 20px;
-    margin-left: 20px;
-    padding: 10px;  559e52*/
   background-color: var(--white);
   display: flex;
   justify-content: center;
@@ -85,7 +84,6 @@
 .annulerChat:hover {
   /* background: linear-gradient(45deg,var(--black),var(--black)); */
   background-color: var(--black);
-
 }
 .envoyerChat {
   width: 120px;
@@ -100,14 +98,13 @@
   align-items: center;
   color: var(--black);
   font-size: larger;
-  transition: 0.5s ;
+  transition: 0.5s;
 }
 
 .envoyerChat:hover {
-    /* background:linear-gradient(45deg,rgb(35, 199, 35),rgb(120, 219, 120)); */
-    background-color: rgb(0, 85, 0);
-    
-  }
+  /* background:linear-gradient(45deg,rgb(35, 199, 35),rgb(120, 219, 120)); */
+  background-color: rgb(0, 85, 0);
+}
 .dispoBoutons {
   display: flex;
   flex-direction: row;
@@ -115,8 +112,7 @@
   margin-top: 50px;
 }
 
-
-#textNouveauChat{
+#textNouveauChat {
   outline: none;
   border: none;
   width: 70%;
@@ -126,4 +122,15 @@
   border-top-left-radius: 0px;
   padding: 5px 15px;
   margin: 10px;
+}
+
+
+
+select{
+  background-color: var(--vertfonce);
+  color: white;
+  border: none;
+  width: 30%;
+  height: 20%;
+  font-size: 20px;
 }

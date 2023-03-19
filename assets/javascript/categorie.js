@@ -6,7 +6,7 @@ const clickJazz = document.querySelector(".Jazz");
 const clickRock = document.querySelector(".Rock");
 const clickMetal = document.querySelector(".Metal");
 const clickPop = document.querySelector(".Pop");
-const clickChill = document.querySelector(".Chill");
+const clickFunk = document.querySelector(".Funk");
 
 const rap = document.getElementsByClassName("chatRap");
 const kpop = document.getElementsByClassName("chatKpop");
@@ -16,7 +16,7 @@ const jazz = document.getElementsByClassName("chatJazz");
 const rock = document.getElementsByClassName("chatRock");
 const metal = document.getElementsByClassName("chatMetal");
 const pop = document.getElementsByClassName("chatPop");
-const chill = document.getElementsByClassName("chatChill");
+const funk = document.getElementsByClassName("chatFunk");
 const tweet = document.getElementsByClassName("tweet");
 
 const clickRapSidenav = document.querySelector(".Rap.sidenavCategories");
@@ -27,7 +27,7 @@ const clickJazzSidenav = document.querySelector(".Jazz.sidenavCategories");
 const clickRockSidenav = document.querySelector(".Rock.sidenavCategories");
 const clickMetalSidenav = document.querySelector(".Metal.sidenavCategories");
 const clickPopSidenav = document.querySelector(".Pop.sidenavCategories");
-const clickChillSidenav = document.querySelector(".Chill.sidenavCategories");
+const clickFunkSidenav = document.querySelector(".Funk.sidenavCategories");
 
 // let autreCategorieRapSidenav = false;
 
@@ -58,8 +58,8 @@ let autreCategorieRap = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieRap ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieRap ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieRap ? "none" : "flex";
     }
   });
 });
@@ -89,8 +89,8 @@ let autreCategoriekpop = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategoriekpop ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategoriekpop ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategoriekpop ? "none" : "flex";
     }
   });
 });
@@ -120,8 +120,8 @@ let autreCategorieClassique = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieClassique ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieClassique ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieClassique ? "none" : "flex";
     }
   });
 });
@@ -151,8 +151,8 @@ let autreCategorieElectro = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieElectro ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieElectro ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieElectro ? "none" : "flex";
     }
   });
 });
@@ -182,8 +182,8 @@ let autreCategorieJazz = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieJazz ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieJazz ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieJazz ? "none" : "flex";
     }
   });
 });
@@ -214,8 +214,8 @@ let autreCategorieRock = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieRock ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieRock ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieRock ? "none" : "flex";
     }
   });
 });
@@ -245,8 +245,8 @@ let autreCategorieMetal = false;
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = autreCategorieMetal ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategorieMetal ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategorieMetal ? "none" : "flex";
     }
   });
 });
@@ -276,39 +276,39 @@ let autreCategoriePop = false;
     for (let i = 0; i < metal.length; i++) {
       metal[i].style.display = autreCategoriePop ? "none" : "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = autreCategoriePop ? "none" : "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = autreCategoriePop ? "none" : "flex";
     }
   });
 });
 
-let autreCategorieChill = false;
-[clickChill, clickChillSidenav].forEach(function (elementChill) {
-  elementChill.addEventListener("click", function () {
-    autreCategorieChill = !autreCategorieChill;
+let autreCategorieFunk = false;
+[clickFunk, clickFunkSidenav].forEach(function (elementFunk) {
+  elementFunk.addEventListener("click", function () {
+    autreCategorieFunk = !autreCategorieFunk;
     for (let i = 0; i < rap.length; i++) {
-      rap[i].style.display = autreCategorieChill ? "none" : "flex";
+      rap[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < kpop.length; i++) {
-      kpop[i].style.display = autreCategorieChill ? "none" : "flex";
+      kpop[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < classique.length; i++) {
-      classique[i].style.display = autreCategorieChill ? "none" : "flex";
+      classique[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < electro.length; i++) {
-      electro[i].style.display = autreCategorieChill ? "none" : "flex";
+      electro[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < jazz.length; i++) {
-      jazz[i].style.display = autreCategorieChill ? "none" : "flex";
+      jazz[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < rock.length; i++) {
-      rock[i].style.display = autreCategorieChill ? "none" : "flex";
+      rock[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < pop.length; i++) {
-      pop[i].style.display = autreCategorieChill ? "none" : "flex";
+      pop[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
     for (let i = 0; i < metal.length; i++) {
-      metal[i].style.display = autreCategorieChill ? "none" : "flex";
+      metal[i].style.display = autreCategorieFunk ? "none" : "flex";
     }
   });
 });
@@ -348,8 +348,8 @@ const restartSidenav = document.querySelector(".reset.sidenavCategories");
     for (let i = 0; i < pop.length; i++) {
       pop[i].style.display = "flex";
     }
-    for (let i = 0; i < chill.length; i++) {
-      chill[i].style.display = "flex";
+    for (let i = 0; i < funk.length; i++) {
+      funk[i].style.display = "flex";
     }
   });
 });

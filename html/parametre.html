@@ -16,7 +16,7 @@
   </head>
 
   <body id="body">
-    <a href="../index.html"><div class="navbar">Music Chat</div></a>
+    <a href="../index.php"><div class="navbar">Music Chat</div></a>
     <div class="conteneurParametre">
       <div class="divInfo">
         <div class="formeInfo">
@@ -49,29 +49,37 @@
           <h3 id="idNotification">Notification</h3>
           <h3>Sécurité et accès</h3>
           <h3>Confidientialité</h3>
-          <h3>Masquer et bloquer</h3>
+          <h3 id="idChoixTheme">Choix du thème</h3>
         </div>
         <div class="parametreVotreCompte">
           <div class="flexligne adresseMail">
             <p>Adresse mail :</p>
-            <input type="text" placeholder="r*****.ch2004@gmail.com">
+            <input type="text" placeholder="r*****.ch2004@gmail.com" />
           </div>
           <div class="flexligne nomUtilisateur">
             <p>Nom d'utilisateur :</p>
-            <input type="text" placeholder="@RaphChiche">
+            <input type="text" placeholder="@RaphChiche" />
           </div>
           <div class="flexligne telephone">
             <p>Numéro de télephone :</p>
-            <input type="text" placeholder="06 ** ** ** 08">
+            <input type="text" placeholder="06 ** ** ** 08" />
           </div>
         </div>
         <div class="parametreNotification">
           <p class="activer_desactiverTXT">activer les notification</p>
           <input type="checkbox" name="activerEtDesactiverNotif" id="notif" />
         </div>
+        <div class="parametreTheme">
+          <div class="choixTheme">Choisisez le thème :</div>
+          <div>
+            <button id="btnSombre">Sombre</button>
+            <button id="btnClaire">Clair</button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- <script src="assets/javascript/java.js"></script> -->
     <script src="../assets/javascript/parametre.js"></script>
+    <script src="../assets/javascript/main.js"></script>
   </body>
 </html>

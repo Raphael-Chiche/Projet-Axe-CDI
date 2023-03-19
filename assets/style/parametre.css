@@ -227,3 +227,38 @@ input{
     margin-bottom: 20px;
   }
 }
+
+/* ---------------------00000 */
+
+
+
+.parametreTheme {
+  background-color: var(--bleutravail);
+  /* width: 800px; */
+  min-width: 200px;
+  height: 500px;
+  display: none;
+  flex-direction: column;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  /* box-shadow: inset 0px 0px 12px 14px rgba(0, 0, 0, 0.43); */
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+
+#btnSombre{
+  background-color: var(--blackpurple);
+  color: var(--white)x;
+  padding: 5px 20px;
+  font-size: 30px;
+  border-radius: 50px;
+}
+
+#btnClaire{
+  background-color: var(--vertclaire);
+  padding: 5px 20px;
+  font-size: 30px;
+  border-radius: 50px;
+}
