@@ -26,6 +26,7 @@ btnClaire.addEventListener("click", () => {
   localStorage.setItem("actual_theme", "white");
   body.style.backgroundColor = "#c8d7c6";
   styleNavbar.style.backgroundColor = "#182d0e";
+  
   console.log("white")
 });
 

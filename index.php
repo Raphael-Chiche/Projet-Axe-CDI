@@ -31,10 +31,6 @@
       $requete->execute();
       $chats = $requete->fetchAll(PDO::FETCH_ASSOC);
 
-
-
-
-
       ?>
       <div>
 
@@ -52,11 +48,24 @@
               </div>
             </div>
             <div class="contenueTweet">
-              <p class="colorFond">
-                <?php echo $chat["contenu"]; ?></p>
-              <span><?php echo $chat["date"]; ?></span>
 
-              <a href="php/supprimer.php?id=<?php echo $chat["id"]; ?>"><img src="assets/image/icons8-poubelle-24.png" alt="" class="deleteChat" /></a>
+              <p class="colorFond">
+                <?php echo $chat["contenu"]; ?>
+              </p>
+
+
+              <?php if ($chat['image']) {
+                echo "<img src='assets/imgTweet/" . $chat['image'] . "' alt='Image Tweet' class='sizeImg'>";
+              } ?>
+
+
+              <span>
+                <?php echo $chat["date"]; ?>
+              </span>
+
+
+
+              <img src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
             </div>
           </div>
         <?php
@@ -167,10 +176,13 @@
       <div class="dispoNouveauChat">
         <div class=" nouveauChat">
           <div class="">
-            <form action="php/inserer.php" method="POST">
+            <form action="php/inserer.php" method="POST" enctype="multipart/form-data">
               <label for="contenu">Contenu :</label>
               <br>
-              <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="auto"></textarea>
+              <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="50"></textarea>
+              <br>
+              <input type="file" name="image" id="image" accept=".jpg, .gif, .png">
+
               <br>
               <label for="theme">Choisir un theme:</label>
 
@@ -187,29 +199,29 @@
                 <option value="chatFunk">Funk</option>
               </select>
 
-              <div class="dispoBoutons">
-                <input type="submit" value="Envoyer" class="envoyerChat">
-                <button class="annulerChat">Annuler</button>
-              </div>
+              <input type="submit" value="Envoyer" class="envoyerChat">
 
             </form>
+            <div class="dispoBoutons">
 
+              <button class="annulerChat">Annuler</button>
+            </div>
           </div>
         </div>
 
 
 
       </div>
-     
+
     </div>
 
 
-    <div class="popupSupprimer">
+    <div class="popupSupprimer visible">
       <div class="validator">
         <p>Êtes-vous sûr de vouloir supprimer le chat?</p>
       </div>
       <div class="dispoBoutons">
-        <button class="validerDelete">Supprimer</button>
+      <a href="php/supprimer.php?id=<?php echo $chat["id"]; ?>"><button class="validerDelete">Supprimer</button></a>
         <button class="annulerDelete">Annuler</button>
       </div>
     </div>
@@ -309,6 +321,7 @@
     <script src="assets/javascript/supprimerChat.js"></script>
 
     <script src="assets/javascript/main.js"></script>
+  </div>
 </body>
 
 </html>

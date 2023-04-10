@@ -1,18 +1,15 @@
 const popUpz = document.querySelector(".popupSupprimer");
-const bouton1 = document.querySelector(".deleteChat");
-const validerDelete = document.querySelector(".validerDelete");
+const clickPoubelle = document.querySelectorAll(".deleteChat");
 const annulerDelete = document.querySelector(".annulerDelete");
-const suppr = document.querySelector(".poubelle");
+const suppr = document.querySelectorAll(".poubelle");
 
-bouton1.addEventListener("click", function (){
-    popUpz.style.display = "flex";
-})
+//selection de toute les 
+clickPoubelle.forEach((a) => { 
+  a.addEventListener("click", function () {
+    popUpz.classList.toggle("visible");
+  });
+});
 
-validerDelete.addEventListener("click", function (){
-    popUpz.style.display = "none";
-    suppr.remove();
-})
-annulerDelete.addEventListener("click", function(){
-    popUpz.style.display = "none";
-})
-
+annulerDelete.addEventListener("click", function () {
+  popUpz.classList.toggle("visible");
+});

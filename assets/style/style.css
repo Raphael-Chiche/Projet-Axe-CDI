@@ -1,5 +1,4 @@
 @import url(tags.css);
-@import url(contenue.css);
 @import url(conteneur.css);
 @import url(exemple_tweet.css);
 @import url(divInfo.css);
@@ -33,7 +32,7 @@ a {
 
 @font-face {
   font-family: "lostar";
-  src: url(‘../font/lostar/Lostar.ttf’) format(‘truetype’);
+  src: url(‘../font/lostar/Lostar.ttf’) ;
 }
 
 body {
@@ -86,4 +85,21 @@ body {
 
 #darknav{
   background-color:  var(--black);
+}
+
+
+@media screen and (max-width:420px){
+  .navbar {
+    font-family: "Lostar";
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    background-color: var(--vertfonce);
+    margin-bottom: 20px;
+    color: var(--white);
+}
+}
+
+.visible{
+  display: none;
 }
