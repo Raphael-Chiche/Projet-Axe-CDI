@@ -8,6 +8,7 @@
 @import url(sidnav.css);
 @import url(supprimerChat.css);
 @import url(connexion.css);
+@import url(popupConnexion.css);
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
 * {
   font-family: "Hanken Grotesk", sans-serif;

@@ -21,6 +21,11 @@
   align-items: center;
 }
 
+.styleRestart{
+  position: sticky;
+  top: 657px;
+}
+
 @media screen and (max-width:550px){
   .divInfo {
     border: var(--blackpurple) solid 3px;

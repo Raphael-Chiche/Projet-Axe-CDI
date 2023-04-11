@@ -319,10 +319,15 @@ let autreCategorieFunk = false;
 
 // rap.classList.contains(boxsChat)
 
-const restart = document.querySelector(".reset");
-const restartSidenav = document.querySelector(".reset.sidenavCategories");
+/* const restart = document.querySelector(".reset");
+const restartSidenav = document.querySelector(".reset.formeInfo");
+let allReset = []
+allReset.push(restart)
+allReset.push(restartSidenav) */
 
-[restart, restartSidenav].forEach(function (elementRestart) {
+const allReset = document.querySelectorAll('.reset, .reset.formInfo')
+
+allReset.forEach(function (elementRestart) {
   elementRestart.addEventListener("click", function () {
     for (let i = 0; i < rap.length; i++) {
       rap[i].style.display = "flex";

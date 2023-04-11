@@ -9,7 +9,9 @@
   <title>Réseau Social</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body id="body">
@@ -48,7 +50,6 @@
               </div>
             </div>
             <div class="contenueTweet">
-
               <p class="colorFond">
                 <?php echo $chat["contenu"]; ?>
               </p>
@@ -58,17 +59,32 @@
                 echo "<img src='assets/imgTweet/" . $chat['image'] . "' alt='Image Tweet' class='sizeImg'>";
               } ?>
 
+              <div style="display:flex;">
+                <span>
+                  <?php echo $chat["date"]; ?>
+                </span>
 
-              <span>
-                <?php echo $chat["date"]; ?>
-              </span>
+
+                <img style="width: 30px;" src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
+                <div class="popupSupprimer visible">
+                  <div class="validator">
+                    <p>Êtes-vous sûr de vouloir supprimer le chat?</p>
+                  </div>
+                  <div class="dispoBoutons">
+                    <a href="php/supprimer.php?id=<?php echo $chat["id"]; ?>" class="validerDelete">Supprimer</a>
+                    <button class="annulerDelete">Annuler</button>
+                    <p>
+                      <?php echo $chat["id"]; ?>
+                    </p>
+                  </div>
+                </div>
+              </div>
 
 
 
-              <img src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
             </div>
           </div>
-        <?php
+          <?php
         }
         ?>
       </div>
@@ -163,7 +179,8 @@
                 <li class="couleur10">blablba</li>
             </ol> -->
         </div>
-        <div class="reset formeInfo">
+
+        <div class="reset formeInfo styleRestart">
           <img src="assets/image/reset.png" alt="Reset" />
           <p class="reset">Restart</p>
         </div>
@@ -184,7 +201,7 @@
               <input type="file" name="image" id="image" accept=".jpg, .gif, .png">
 
               <br>
-              <label for="theme">Choisir un theme:</label>
+              <label for="choixTheme">Choisir un theme:</label>
 
               <select name="theme" id="choixTheme">
                 <option value="">--Choix--</option>
@@ -216,15 +233,8 @@
     </div>
 
 
-    <div class="popupSupprimer visible">
-      <div class="validator">
-        <p>Êtes-vous sûr de vouloir supprimer le chat?</p>
-      </div>
-      <div class="dispoBoutons">
-      <a href="php/supprimer.php?id=<?php echo $chat["id"]; ?>"><button class="validerDelete">Supprimer</button></a>
-        <button class="annulerDelete">Annuler</button>
-      </div>
-    </div>
+
+
 
     <div class="sidebar">
       <div class="toggle-btn">
@@ -251,7 +261,8 @@
       </div>
 
       <div class="formeInfo">
-        <a style="color: white" href="html/parametre.html" class="parametre"><img src="assets/image/parametre.png" alt="parametre" />
+        <a style="color: white" href="html/parametre.html" class="parametre"><img src="assets/image/parametre.png"
+            alt="parametre" />
           <p>Parametre</p>
         </a>
       </div>
@@ -317,11 +328,22 @@
     <!-- <script src="assets/javascript/java.js"></script> -->
     <script src="assets/javascript/categorie.js"></script>
     <script src="assets/javascript/popup.js"></script>
-    <script src="assets/javascript/floupagescroll.js"></script>
+
     <script src="assets/javascript/supprimerChat.js"></script>
+
 
     <script src="assets/javascript/main.js"></script>
   </div>
+  <div class="flouInscription">
+    <div class="txtPopupCo">
+      Connectez-vous pour pouvoir voir plus de Chat !
+    </div>
+    <div>
+      <a href="html/connexion.php" class="boutonConnexion"> Connectez-vous!</a>
+    </div>
+  </div>
+
+  <script src="assets/javascript/floupagescroll.js"></script>
 </body>
 
 </html>

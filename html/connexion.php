@@ -25,7 +25,7 @@
               --bs-btn-padding-x: 1rem;
               --bs-btn-font-size: 2rem;
             ">
-          Connection
+          Connexion
         </button>
 
         <button type="button" class="btn btn-light btn-lg rounded-pill" style="
@@ -40,22 +40,22 @@
 
     <div class="d-flex flex-column align-items-center">
       <div id="connectionDisplay" class="col border rounded p-3 bg-success bg-gradient">
-        <h5>Connection</h5>
+        <h5>Connexion</h5>
 
         <br />
 
-        <form>
+        <form method="POST" action="">
           <div class="mb-2">
             <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-            <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" />
+            <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="email"/>
           </div>
 
           <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Mot de passse</label>
-            <input type="password" class="form-control" id="password" />
+            <input type="password" class="form-control" id="password" name="password"/>
           </div>
 
-          <button type="submit" class="btn btn-primary">Go</button>
+          <button type="submit" name="envoiConnex" class="btn btn-primary">Envoyer</button>
         </form>
       </div>
 
