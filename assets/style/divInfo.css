@@ -6,8 +6,6 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  position: sticky;
-  top: 20px;
   padding: 3%;
   padding-left: 1%;
   padding-top: 1%;
@@ -19,6 +17,8 @@
 .formeInfo {
   display: flex;
   align-items: center;
+  
+  text-decoration: none;
 }
 
 .styleRestart{
@@ -35,8 +35,6 @@
     background-color: var(--white);
     display: none;
     flex-direction: column;
-    position: sticky;
-    top: 20px;
     padding: 3%;
     padding-left: 1%;
     padding-top: 1%;
@@ -45,7 +43,4 @@
     border-top-left-radius: 0;
   }
 
-  .reset{
-    display: none;
-  }
 }

@@ -44,8 +44,6 @@ ol {
     align-items: flex-start;
     padding-left: 6px;
     padding-right: 6px;
-    position: sticky;
-    top: 225px;
     color: var(--bleutravail);
     font-style: oblique;
     font-size: larger;
@@ -85,6 +83,8 @@ ol {
     top: 20px;
     padding-left: 20px;
     padding-right: 20px;
+    height: 20px;
+    width: 25vw;
 }
 
 @media screen and (max-width:550px){
@@ -99,8 +99,6 @@ ol {
         align-items: flex-start;
         padding-left: 6px;
         padding-right: 6px;
-        position: sticky;
-        top: 20px;
         color: var(--bleutravail);
         font-style: oblique;
         font-size: larger;

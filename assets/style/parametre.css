@@ -135,7 +135,7 @@ h3 {
 input{
   outline: none;
   border: none;
-  width: 290px;
+  width: auto;
   height: 40px;
   background-color: var(--taupe);
   border-radius: 50px;
@@ -240,7 +240,7 @@ input{
   display: none;
   flex-direction: column;
   border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   /* box-shadow: inset 0px 0px 12px 14px rgba(0, 0, 0, 0.43); */
   padding: 20px;
   justify-content: center;

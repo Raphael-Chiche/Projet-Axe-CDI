@@ -51,6 +51,9 @@ body {
   display: flex;
   align-items: center;
 }
+.linkColor{
+  color: white;
+}
 .none {
   display: none;
 }
@@ -89,7 +92,7 @@ body {
 }
 
 
-@media screen and (max-width:420px){
+@media screen and (max-width:428px){
   .navbar {
     font-family: "Lostar";
     text-align: center;
@@ -99,8 +102,23 @@ body {
     margin-bottom: 20px;
     color: var(--white);
 }
-}
 
+}
+@media screen and (max-width: 550px) {
+
+  .actu {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    justify-content:center;
+  }
+}
 .visible{
   display: none;
+}
+
+.Welcome{
+  text-align: center;
+  color: var(--blackpurple);
+  font-style: italic;
 }

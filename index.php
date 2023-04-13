@@ -1,3 +1,9 @@
+<?php session_start();
+// echo $_SESSION["id"];
+// echo $_SESSION["pseudo"];
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +22,7 @@
 
 <body id="body">
   <div class="navbar">Music Chat</div>
+
   <div class="conteneur">
     <button class="floating-btn">
       <img src="assets/image/plus.png" alt="Pop-up" />
@@ -33,8 +40,12 @@
       $requete->execute();
       $chats = $requete->fetchAll(PDO::FETCH_ASSOC);
 
+
+
+
+
       ?>
-      <div>
+      <div class="tweetStyle">
 
 
         <?php foreach ($chats as $chat) { ?>
@@ -45,8 +56,12 @@
                 <img src="assets/image/profilPictur.png" class="imgprofil" alt="Profil Picture" />
               </div>
               <div class="infoTexte colorFond">
-                <h3 class="colorFond">Rap Exemple1</h3>
-                <h4 class="colorFond">@RapGenius</h4>
+                <h3 class="colorFond">
+                  <?php echo $chat["pseudoChat"]; ?>
+                </h3>
+                <h4 class="colorFond">@
+                  <?php echo $chat["pseudoChat"]; ?>
+                </h4>
               </div>
             </div>
             <div class="contenueTweet">
@@ -62,10 +77,24 @@
               <div style="display:flex;">
                 <span>
                   <?php echo $chat["date"]; ?>
+
+
+
+                  <?php echo $chat["userId"]; ?>
+
+
+
                 </span>
 
+                <?php
 
-                <img style="width: 30px;" src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
+                if (isset($_SESSION["id"]) && $chat["userId"] === $_SESSION["id"]) {
+                  ?>
+                  <img src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
+                  <?php
+                } else {
+                }
+                ?>
                 <div class="popupSupprimer visible">
                   <div class="validator">
                     <p>Êtes-vous sûr de vouloir supprimer le chat?</p>
@@ -73,9 +102,6 @@
                   <div class="dispoBoutons">
                     <a href="php/supprimer.php?id=<?php echo $chat["id"]; ?>" class="validerDelete">Supprimer</a>
                     <button class="annulerDelete">Annuler</button>
-                    <p>
-                      <?php echo $chat["id"]; ?>
-                    </p>
                   </div>
                 </div>
               </div>
@@ -93,20 +119,29 @@
         <div class="divInfo">
           <div class="formeInfo">
             <a href="html/connexion.php" class="parametre">
-              <img src="assets/image/profil.png" alt="Profil" />
-              <p>Profil</p>
+              <img src="assets/image/connexion.png" alt="Profil" />
+              <p>Connexion</p>
             </a>
           </div>
+          <?php
+          if (isset($_SESSION["id"])) {
+            ?>
+            <div class="formeInfo">
+              <a href="html/profil.php" class="parametre">
+                <img src="assets/image/profil.png" alt="Profil" />
+                <p>Profil</p>
+              </a>
+            </div>
 
+            <?php
+          }
+          ?>
           <div class="formeInfo">
             <img src="assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
             <p>Ajouter</p>
           </div>
 
-          <div class="formeInfo">
-            <img src="assets/image/messagePrivé.png" alt="chat" />
-            <p>Message privé</p>
-          </div>
+
 
           <div class="formeInfo">
             <a href="html/parametre.html" class="parametre"><img src="assets/image/parametre.png" alt="parametre" />
@@ -165,6 +200,11 @@
             <div class="boxs cat10"></div>
             <p>Country</p>
           </div>
+          
+          <div class="reset formeInfo styleRestart">
+            <img src="assets/image/reset.png" alt="Reset" />
+            <p class="reset">Restart</p>
+          </div>
 
           <!-- <ol>
                 <li class="divertissement couleur1">Divertissement</li>
@@ -178,12 +218,10 @@
                 <li class="couleur9">blablba</li>
                 <li class="couleur10">blablba</li>
             </ol> -->
+
         </div>
 
-        <div class="reset formeInfo styleRestart">
-          <img src="assets/image/reset.png" alt="Reset" />
-          <p class="reset">Restart</p>
-        </div>
+
       </div>
     </div>
 
@@ -192,37 +230,49 @@
     <div class="popup">
       <div class="dispoNouveauChat">
         <div class=" nouveauChat">
-          <div class="">
-            <form action="php/inserer.php" method="POST" enctype="multipart/form-data">
-              <label for="contenu">Contenu :</label>
-              <br>
-              <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="50"></textarea>
-              <br>
-              <input type="file" name="image" id="image" accept=".jpg, .gif, .png">
+          <div>
+            <?php
+            if (isset($_SESSION["id"])) {
+              ?>
+              <form action="php/inserer.php" method="POST" enctype="multipart/form-data" class="styleForm">
+                <label for="contenu">Contenu :</label>
+                <br>
+                <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="50"></textarea>
+                <br>
+                <input type="file" name="image" id="image" accept=".jpg, .gif, .png">
 
-              <br>
-              <label for="choixTheme">Choisir un theme:</label>
+                <br>
+                <label for="choixTheme">Choisir un theme:</label>
 
-              <select name="theme" id="choixTheme">
-                <option value="">--Choix--</option>
-                <option value="chatRap">Rap</option>
-                <option value="chatKpop">Kpop</option>
-                <option value="chatElectro">Electro</option>
-                <option value="chatClassique">Classique</option>
-                <option value="chatJazz">Jazz</option>
-                <option value="chatRock">Rock</option>
-                <option value="chatMetal">Metal</option>
-                <option value="chatPop">Pop</option>
-                <option value="chatFunk">Funk</option>
-              </select>
+                <select name="theme" id="choixTheme">
+                  <option value="">--Choix--</option>
+                  <option value="chatRap">Rap</option>
+                  <option value="chatKpop">Kpop</option>
+                  <option value="chatElectro">Electro</option>
+                  <option value="chatClassique">Classique</option>
+                  <option value="chatJazz">Jazz</option>
+                  <option value="chatRock">Rock</option>
+                  <option value="chatMetal">Metal</option>
+                  <option value="chatPop">Pop</option>
+                  <option value="chatFunk">Funk</option>
+                </select>
+                <div style="display: flex; justify-content: center;">
+                  <input type="submit" value="Envoyer" class="envoyerChat">
+                </div>
+              </form>
+              <div class="dispoBoutons">
 
-              <input type="submit" value="Envoyer" class="envoyerChat">
+                <button class="annulerChat">Annuler</button>
+              </div>
+              <?php
+            } else {
+              ?>
+              <a href="html/connexion.php">Connetez vous</a>
 
-            </form>
-            <div class="dispoBoutons">
+              <?php
+            }
 
-              <button class="annulerChat">Annuler</button>
-            </div>
+            ?>
           </div>
         </div>
 
@@ -245,25 +295,35 @@
       <h3>Menu</h3>
       <div class="formeInfo">
         <a href="html/connexion.php" class="parametre">
-          <img src="assets/image/profil.png" alt="Profil" />
-          <p>Profil</p>
+          <img src="assets/image/connexion.png" alt="Profil" />
+          <p class="linkColor">Connexion</p>
         </a>
       </div>
+      <?php
+      if (isset($_SESSION["id"])) {
+        ?>
+        <div class="formeInfo">
+          <a href="html/profil.php" class="parametre">
+            <img src="assets/image/profil.png" alt="Profil" />
+            <p class="linkColor">Profil</p>
+          </a>
+        </div>
+
+        <?php
+      }
+      ?>
 
       <div class="formeInfo">
         <img src="assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
-        <p>Ajouter</p>
+        <p class="linkColor">Ajouter</p>
       </div>
 
-      <div class="formeInfo">
-        <img src="assets/image/messagePrivé.png" alt="chat" />
-        <p>Message privé</p>
-      </div>
+
 
       <div class="formeInfo">
-        <a style="color: white" href="html/parametre.html" class="parametre"><img src="assets/image/parametre.png"
-            alt="parametre" />
-          <p>Parametre</p>
+        <a href="html/parametre.html" class="parametre">
+          <img src="assets/image/parametre.png" alt="parametre" />
+          <p class="linkColor">Parametre</p>
         </a>
       </div>
 
@@ -319,7 +379,7 @@
           <p>Country</p>
         </div>
       </div>
-      <div class="reset formeInfo">
+      <div class="reset formeInfo" style="z-index: 8;">
         <img src="assets/image/reset.png" alt="Reset" />
         <p class="reset">Restart</p>
       </div>
@@ -328,10 +388,8 @@
     <!-- <script src="assets/javascript/java.js"></script> -->
     <script src="assets/javascript/categorie.js"></script>
     <script src="assets/javascript/popup.js"></script>
-
+    <script src="assets/javascript/sidnav.js"></script>
     <script src="assets/javascript/supprimerChat.js"></script>
-
-
     <script src="assets/javascript/main.js"></script>
   </div>
   <div class="flouInscription">
@@ -343,7 +401,12 @@
     </div>
   </div>
 
-  <script src="assets/javascript/floupagescroll.js"></script>
+  <?php
+  if (!isset($_SESSION["id"])) { ?>
+    <script src="assets/javascript/floupagescroll.js"></script>
+    <?php
+  }
+  ?>
 </body>
 
 </html>

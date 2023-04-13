@@ -16,9 +16,11 @@ window.addEventListener("scroll", function (event) {
 
 
 
-
+console.log("salut");
 document.querySelector(".sidebar .toggle-btn").addEventListener("click", function(){
+    
     document.querySelector(".sidebar").classList.toggle("active");
+
 });
 
 

@@ -10,29 +10,41 @@ if (!localStorage.getItem("actual_theme")) {
   theme = localStorage.getItem("actual_theme");
 }
 
-
 if (theme === "white") {
   body.style.backgroundColor = "#c8d7c6";
   styleNavbar.style.backgroundColor = "#182d0e";
 }
 
-
 if (theme === "black") {
-    body.style.backgroundColor = "#182d0e";
-    styleNavbar.style.backgroundColor = "#000000";
-  }
+  body.style.backgroundColor = "#182d0e";
+  styleNavbar.style.backgroundColor = "#000000";
+}
 
 btnClaire.addEventListener("click", () => {
   localStorage.setItem("actual_theme", "white");
   body.style.backgroundColor = "#c8d7c6";
   styleNavbar.style.backgroundColor = "#182d0e";
-  
-  console.log("white")
+
+  console.log("white");
 });
 
 btnSombre.addEventListener("click", () => {
   localStorage.setItem("actual_theme", "black");
   body.style.backgroundColor = "#182d0e";
   styleNavbar.style.backgroundColor = "#000000";
-  console.log("dark")
+  console.log("dark");
+});
+
+//---------------------------------------------------------
+const messageTextarea = document.getElementById('contenu');
+console.log(messageTextarea);
+const savedMessage = localStorage.getItem('message');
+if (savedMessage) {
+  messageTextarea.value = savedMessage;
+}
+
+messageTextarea.addEventListener('input', function() {
+  const message = messageTextarea.value;
+
+  localStorage.setItem('message', message);
 });

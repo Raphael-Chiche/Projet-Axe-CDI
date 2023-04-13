@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,45 +15,60 @@
 </head>
 
 <body id="body">
+
   <a href="../index.php" class="text-decoration-none">
     <div class="d-flex justify-content-center navbar">Music Chat</div>
   </a>
   <div>
     <div id="choix_formulaires">
       <div class="d-flex justify-content-evenly align-items-center">
-        <button type="button" class="btn btn-success btn-lg rounded-pill" style="
+        <?php
+        if (!isset($_SESSION["id"])) {
+        ?>
+          <button type="button" class="btn btn-success btn-lg rounded-pill" style="
               --bs-btn-padding-y: 0.5rem;
               --bs-btn-padding-x: 1rem;
               --bs-btn-font-size: 2rem;
             ">
-          Connexion
-        </button>
+            Connexion
+          </button>
 
-        <button type="button" class="btn btn-light btn-lg rounded-pill" style="
+          <button type="button" class="btn btn-light btn-lg rounded-pill" style="
               --bs-btn-padding-y: 0.5rem;
               --bs-btn-padding-x: 1rem;
               --bs-btn-font-size: 2rem;
             ">
-          Inscription
-        </button>
+            Inscription
+          </button>
+        <?php
+        } else {
+        ?>
+          <a href="../php/decoUser.php" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">
+
+            Deconnexion
+          </a>
+        <?php
+        }
+        ?>
       </div>
     </div>
 
     <div class="d-flex flex-column align-items-center">
+
       <div id="connectionDisplay" class="col border rounded p-3 bg-success bg-gradient">
         <h5>Connexion</h5>
 
         <br />
 
-        <form method="POST" action="">
+        <form method="POST" action="../php/ConnexionUser.php">
           <div class="mb-2">
             <label for="exampleInputEmail1" class="form-label">Adresse mail</label>
-            <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="email"/>
+            <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" name="email" />
           </div>
 
           <div class="mb-2">
             <label for="exampleInputPassword1" class="form-label">Mot de passse</label>
-            <input type="password" class="form-control" id="password" name="password"/>
+            <input type="password" class="form-control" id="password" name="password" />
           </div>
 
           <button type="submit" name="envoiConnex" class="btn btn-primary">Envoyer</button>
@@ -64,7 +80,12 @@
 
         <br />
 
-        <form action="../php/inserer.php" method="POST">
+        <form action="../php/InscriptionUser.php" method="POST">
+          <div class="mb-3">
+            <label for="pseudo" class="form-label">Pseudo ?</label>
+            <input type="text" class="form-control" name="pseudo" id="pseudo" />
+          </div>
+
           <div class="mb-3">
             <label for="mail" class="form-label">Adresse mail ?</label>
             <input type="email" class="form-control" name="mail" id="mail" aria-describedby="emailHelp" />
@@ -92,9 +113,10 @@
             </select>
           </div>
 
-          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <button type="submit" name="envoiInscri" class="btn btn-primary">Envoyer</button>
         </form>
       </div>
+
     </div>
   </div>
 

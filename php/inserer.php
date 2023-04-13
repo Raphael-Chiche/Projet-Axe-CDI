@@ -1,6 +1,6 @@
 <?php 
     require_once "connec.php"; 
-    
+    session_start();
     if( $_POST["contenu"]!=""){
         
         if(isset($_FILES['image'])) {
@@ -25,9 +25,12 @@
             "theme" => $_POST["theme"],
             "contenu" => $_POST["contenu"],
             "date" => date("Y-m-d H:i:s"),
-            "image" => $image
+            "image" => $image,
+            "userId" =>$_SESSION["id"],
+            "pseudoChat" => $_SESSION["pseudo"]
+
         ];
-        $requete = $database->prepare("INSERT INTO chats (theme, contenu, date, image) VALUES (:theme ,:contenu, :date, :image)");
+        $requete = $database->prepare("INSERT INTO chats (theme, contenu, date, image,userId,pseudoChat) VALUES (:theme ,:contenu, :date, :image,:userId,:pseudoChat)");
         $requete->execute($data);
 
         if($requete == true) {
@@ -41,27 +44,4 @@
         echo "Veuillez remplir tout les champs";
     }
 
-
-
-    if($_POST["password"] !="" && $_POST["mail"] != ""){
-        $data= [
-            "password"=> password_hash($_POST["password"], PASSWORD_DEFAULT),
-            "mail" =>$_POST["mail"]
-        ];
-
-        $requete = $database->prepare("INSERT INTO users (mail,password) VALUES (:mail,:password)");
-        $requete->execute($data);
-
-        if($requete){
-            header("Location: ../html/connexion.php");
-        }else{
-            echo "Une erreur est survenue";
-        }
-      
-
-
-    } else{
-        echo "Veuillez remplir tous les champs";
-    }
-    
 ?>
