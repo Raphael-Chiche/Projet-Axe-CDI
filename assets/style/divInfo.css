@@ -1,6 +1,7 @@
 .divInfo {
   border: var(--blackpurple) solid 1px;
   margin: 5px;
+  margin-left: 0px;
   border-radius: 20px;
   width: auto;
   background-color: var(--white);
@@ -17,16 +18,19 @@
 .formeInfo {
   display: flex;
   align-items: center;
-  
+
   text-decoration: none;
 }
 
-.styleRestart{
-  position: sticky;
-  top: 657px;
+.connexProfil{
+  display: flex;
+  flex-direction: row;
 }
 
-@media screen and (max-width:550px){
+.navClick{
+  display:block;
+}
+@media screen and (max-width: 750px) {
   .divInfo {
     border: var(--blackpurple) solid 3px;
     margin: 5px;
@@ -43,4 +47,12 @@
     border-top-left-radius: 0;
   }
 
+  .navClick{
+    display:none;
+  }
+
+  .connexProfil{
+    display: none;
+  }
+  
 }

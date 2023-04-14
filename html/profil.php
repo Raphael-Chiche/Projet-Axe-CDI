@@ -20,7 +20,33 @@
 
 <body id="body">
     <a href="../index.php">
-        <div class="navbar"> Music Chat</div>
+        <div class="navbar">
+         
+            <div class="formeInfo navClick">
+                <a href="parametre.html" class="parametre"><img src="../assets/image/para.svg" alt="parametre" />
+                </a>
+            </div>
+            <a href="../index.php"> <p class="navbarTitle">Music Chat</p></a>
+            <div class="connexProfil">
+                <div class="formeInfo">
+                    <a href="connexion.php" class="parametre">
+                        <img src="../assets/image/connexion.png" alt="Profil" />
+                    </a>
+                </div>
+                <?php
+                if (isset($_SESSION["id"])) {
+                    ?>
+                    <div class="formeInfo">
+                        <a href="profil.php" class="parametre">
+                            <img src="../assets/image/user.png" alt="Profil" />
+                        </a>
+                    </div>
+
+                    <?php
+                }
+                ?>
+            </div>
+        </div>
     </a>
     <?php if (isset($_GET["pseudo"])) { ?>
         <h2 class="Welcome">Bienvenu sur le profil de
@@ -63,7 +89,7 @@
 
 
             ?>
-            <div style="    display: flex;flex-direction: column; width: 75vw;">
+            <div class="tweetStyle">
 
 
                 <?php foreach ($chats as $chat) { ?>
@@ -136,38 +162,7 @@
             </div>
 
             <div class="tagRestart">
-                <div class="divInfo">
-                    <div class="formeInfo">
-                        <a href="connexion.php" class="parametre">
-                            <img src="../assets/image/connexion.png" alt="Profil" />
-                            <p>Connexion</p>
-                        </a>
-                    </div>
-                    <?php
-                    if (isset($_SESSION["id"])) {
-                        ?>
-                        <div class="formeInfo">
-                            <a href="" class="parametre">
-                                <img src="../assets/image/profil.png" alt="Profil" />
-                                <p>Profil</p>
-                            </a>
-                        </div>
 
-                        <?php
-                    }
-                    ?>
-                    <div class="formeInfo">
-                        <img src="../assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
-                        <p>Ajouter</p>
-                    </div>
-
-                    <div class="formeInfo">
-                        <a href="parametre.html" class="parametre"><img src="../assets/image/parametre.png"
-                                alt="parametre" />
-                            <p>Parametre</p>
-                        </a>
-                    </div>
-                </div>
                 <div class="div_tag">
                     <h3 style="color: var(--blackpurple)">Catégories</h3>
                     <div class="Rap">
@@ -250,18 +245,18 @@
             </div>
             <h3>Menu</h3>
             <div class="formeInfo">
-                <a href="html/connexion.php" class="parametre">
-                    <img src="assets/image/connexion.png" alt="Profil" />
-                    <p>Connexion</p>
+                <a href="connexion.php" class="parametre">
+                    <img src="../assets/image/connexion.png" alt="Profil" />
+                    <p class="linkColor">Connexion</p>
                 </a>
             </div>
             <?php
             if (isset($_SESSION["id"])) {
                 ?>
                 <div class="formeInfo">
-                    <a href="html/connexion.php" class="parametre">
-                        <img src="assets/image/profil.png" alt="Profil" />
-                        <p>Profil</p>
+                    <a href="connexion.php" class="parametre">
+                        <img src="../assets/image/user.png" alt="Profil" />
+                        <p class="linkColor">Profil</p>
                     </a>
                 </div>
 
@@ -269,20 +264,11 @@
             }
             ?>
 
-            <div class="formeInfo">
-                <img src="assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
-                <p>Ajouter</p>
-            </div>
+           
 
             <div class="formeInfo">
-                <img src="assets/image/messagePrivé.png" alt="chat" />
-                <p>Message privé</p>
-            </div>
-
-            <div class="formeInfo">
-                <a style="color: white" href="html/parametre.html" class="parametre"><img
-                        src="assets/image/parametre.png" alt="parametre" />
-                    <p>Parametre</p>
+                <a href="parametre.html" class="parametre"><img src="../assets/image/para.svg" alt="parametre" />
+                    <p class="linkColor">Parametre</p>
                 </a>
             </div>
 
@@ -349,7 +335,7 @@
         <!-- <script src="assets/javascript/java.js"></script> -->
         <script src="../assets/javascript/categorie.js"></script>
         <script src="../assets/javascript/popup.js"></script>
-
+        <script src="../assets/javascript/sidnav.js"></script>
         <script src="../assets/javascript/supprimerChat.js"></script>
 
 

@@ -1,7 +1,8 @@
 .conteneurParametre {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  padding-top: 15px;
+  justify-content: center;
 }
 
 body {
@@ -126,13 +127,13 @@ h3 {
 
 /* ---------------------- */
 
-.activer_desactiverTXT{
+.activer_desactiverTXT {
   padding: 15px 20px;
 }
 
 /* -------------- */
 
-input{
+input {
   outline: none;
   border: none;
   width: auto;
@@ -141,7 +142,23 @@ input{
   border-radius: 50px;
   padding: 5px 15px;
   margin: 10px;
+}
 
+
+.parametreTheme {
+  background-color: var(--bleutravail);
+  /* width: 800px; */
+  min-width: 200px;
+  height: 500px;
+  display: none;
+  flex-direction: column;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  /* box-shadow: inset 0px 0px 12px 14px rgba(0, 0, 0, 0.43); */
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
 }
 @media screen and (max-width: 864px) {
   .adresseMail {
@@ -150,27 +167,21 @@ input{
     align-items: center;
     flex-direction: column;
   }
-  
+
   .nomUtilisateur {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  
+
   .telephone {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
   }
-  .conteneurParametre {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
+
   .parametrePrincipaux {
     background-color: var(--blackpurple);
     color: white;
@@ -226,37 +237,39 @@ input{
     color: var(--white);
     margin-bottom: 20px;
   }
+  .parametreTheme {
+    background-color: var(--bleutravail);
+    /* width: 800px; */
+    min-width: 200px;
+    height: 500px;
+    display: none;
+    flex-direction: column;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 00px;
+
+    /* box-shadow: inset 0px 0px 12px 14px rgba(0, 0, 0, 0.43); */
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+  }
 }
 
 /* ---------------------00000 */
 
 
 
-.parametreTheme {
-  background-color: var(--bleutravail);
-  /* width: 800px; */
-  min-width: 200px;
-  height: 500px;
-  display: none;
-  flex-direction: column;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  /* box-shadow: inset 0px 0px 12px 14px rgba(0, 0, 0, 0.43); */
-  padding: 20px;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
-}
-
-#btnSombre{
+#btnSombre {
   background-color: var(--blackpurple);
-  color: var(--white)x;
+  color: var(--white) x;
   padding: 5px 20px;
   font-size: 30px;
   border-radius: 50px;
 }
 
-#btnClaire{
+#btnClaire {
   background-color: var(--vertclaire);
   padding: 5px 20px;
   font-size: 30px;

@@ -15,19 +15,45 @@
   <title>Réseau Social</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&display=swap" rel="stylesheet" />
 </head>
 
 <body id="body">
-  <div class="navbar">Music Chat</div>
+  <div class="navbar">
+
+    <div class="formeInfo navClick">
+      <a href="html/parametre.html" class="parametre"><img src="assets/image/para.svg" alt="parametre" />
+      </a>
+    </div>
+    <a href="index.php">
+      <p class="navbarTitle">Music Chat</p>
+    </a>
+    <div class="connexProfil">
+      <div class="formeInfo">
+        <a href="html/connexion.php" class="parametre">
+          <img src="assets/image/connexion.png" alt="Profil" />
+        </a>
+      </div>
+      <?php
+      if (isset($_SESSION["id"])) {
+      ?>
+        <div class="formeInfo">
+          <a href="html/profil.php" class="parametre">
+            <img src="assets/image/user.png" alt="Profil" />
+          </a>
+        </div>
+
+      <?php
+      }
+      ?>
+    </div>
+  </div>
 
   <div class="conteneur">
-    <button class="floating-btn">
-      <img src="assets/image/plus.png" alt="Pop-up" />
-    </button>
-
+    
+  <button class="floating-btn">
+          <img src="assets/image/plus.png" alt="Pop-up" />
+        </button>
 
 
 
@@ -59,8 +85,7 @@
                 <h3 class="colorFond">
                   <?php echo $chat["pseudoChat"]; ?>
                 </h3>
-                <h4 class="colorFond">@
-                  <?php echo $chat["pseudoChat"]; ?>
+                <h4 class="colorFond">@<?php echo $chat["pseudoChat"]; ?>
                 </h4>
               </div>
             </div>
@@ -89,9 +114,9 @@
                 <?php
 
                 if (isset($_SESSION["id"]) && $chat["userId"] === $_SESSION["id"]) {
-                  ?>
+                ?>
                   <img src="assets/image/icons8-poubelle-24.png" alt="Supprimer" class="deleteChat" />
-                  <?php
+                <?php
                 } else {
                 }
                 ?>
@@ -110,45 +135,15 @@
 
             </div>
           </div>
-          <?php
+        <?php
         }
         ?>
       </div>
 
       <div class="tagRestart">
-        <div class="divInfo">
-          <div class="formeInfo">
-            <a href="html/connexion.php" class="parametre">
-              <img src="assets/image/connexion.png" alt="Profil" />
-              <p>Connexion</p>
-            </a>
-          </div>
-          <?php
-          if (isset($_SESSION["id"])) {
-            ?>
-            <div class="formeInfo">
-              <a href="html/profil.php" class="parametre">
-                <img src="assets/image/profil.png" alt="Profil" />
-                <p>Profil</p>
-              </a>
-            </div>
 
-            <?php
-          }
-          ?>
-          <div class="formeInfo">
-            <img src="assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
-            <p>Ajouter</p>
-          </div>
+       
 
-
-
-          <div class="formeInfo">
-            <a href="html/parametre.html" class="parametre"><img src="assets/image/parametre.png" alt="parametre" />
-              <p>Parametre</p>
-            </a>
-          </div>
-        </div>
         <div class="div_tag">
           <h3 style="color: var(--blackpurple)">Catégories</h3>
           <div class="Rap">
@@ -168,7 +163,7 @@
 
           <div class="Electro">
             <div class="boxs cat4"></div>
-            <p>Electronique</p>
+            <p>Electro</p>
           </div>
 
           <div class="Jazz">
@@ -200,7 +195,7 @@
             <div class="boxs cat10"></div>
             <p>Country</p>
           </div>
-          
+
           <div class="reset formeInfo styleRestart">
             <img src="assets/image/reset.png" alt="Reset" />
             <p class="reset">Restart</p>
@@ -233,11 +228,11 @@
           <div>
             <?php
             if (isset($_SESSION["id"])) {
-              ?>
+            ?>
               <form action="php/inserer.php" method="POST" enctype="multipart/form-data" class="styleForm">
                 <label for="contenu">Contenu :</label>
                 <br>
-                <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="50"></textarea>
+                <textarea name="contenu" id="contenu" class="contenu" maxlength="300" cols="50" value=""></textarea>
                 <br>
                 <input type="file" name="image" id="image" accept=".jpg, .gif, .png">
 
@@ -264,12 +259,12 @@
 
                 <button class="annulerChat">Annuler</button>
               </div>
-              <?php
+            <?php
             } else {
-              ?>
+            ?>
               <a href="html/connexion.php">Connetez vous</a>
 
-              <?php
+            <?php
             }
 
             ?>
@@ -301,28 +296,22 @@
       </div>
       <?php
       if (isset($_SESSION["id"])) {
-        ?>
+      ?>
         <div class="formeInfo">
           <a href="html/profil.php" class="parametre">
-            <img src="assets/image/profil.png" alt="Profil" />
+            <img src="assets/image/user.png" alt="Profil" />
             <p class="linkColor">Profil</p>
           </a>
         </div>
 
-        <?php
+      <?php
       }
       ?>
-
-      <div class="formeInfo">
-        <img src="assets/image/ajouter.png" alt="Ajouter" class="ajouter1" />
-        <p class="linkColor">Ajouter</p>
-      </div>
-
 
 
       <div class="formeInfo">
         <a href="html/parametre.html" class="parametre">
-          <img src="assets/image/parametre.png" alt="parametre" />
+          <img src="assets/image/para.svg" alt="parametre" />
           <p class="linkColor">Parametre</p>
         </a>
       </div>
@@ -346,7 +335,7 @@
 
         <div class="Electro sidenavCategories">
           <div class="boxs cat4"></div>
-          <p>Electronique</p>
+          <p>Electro</p>
         </div>
 
         <div class="Jazz sidenavCategories">
@@ -391,6 +380,7 @@
     <script src="assets/javascript/sidnav.js"></script>
     <script src="assets/javascript/supprimerChat.js"></script>
     <script src="assets/javascript/main.js"></script>
+    <script src="assets/javascript/localstorageTextarea.js"></script>
   </div>
   <div class="flouInscription">
     <div class="txtPopupCo">
@@ -404,7 +394,7 @@
   <?php
   if (!isset($_SESSION["id"])) { ?>
     <script src="assets/javascript/floupagescroll.js"></script>
-    <?php
+  <?php
   }
   ?>
 </body>

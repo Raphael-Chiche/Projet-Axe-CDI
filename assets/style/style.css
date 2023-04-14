@@ -18,7 +18,7 @@
   text-decoration: none;
 }
 a {
-  color: var(--bleutravail);
+  color: var(--white);
 }
 :root {
   --blue: #1e90ff;
@@ -33,25 +33,27 @@ a {
 
 @font-face {
   font-family: "lostar";
-  src: url(‘../font/lostar/Lostar.ttf’) ;
+  src: url(‘../font/lostar/Lostar.ttf’);
 }
 
 body {
   background-color: #c8d7c6;
+  overflow-x: hidden;
 }
 
 .actu {
   display: flex;
   flex-direction: row;
-  width: 100%; 
+  width: 100%;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .parametre {
   display: flex;
   align-items: center;
 }
-.linkColor{
+.linkColor {
   color: white;
 }
 .none {
@@ -63,7 +65,7 @@ body {
   display: flex;
 }
 
-.navbar {
+.navbarTitle {
   font-family: "Lostar";
   text-align: center;
   font-size: 80px;
@@ -71,6 +73,11 @@ body {
   background-color: var(--vertfonce);
   margin-bottom: 20px;
   color: var(--white);
+}
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .flexcolonne {
@@ -83,17 +90,16 @@ body {
   flex-direction: row;
 }
 
-#darkbody{
+#darkbody {
   background-color: var(--vertfonce);
 }
 
-#darknav{
-  background-color:  var(--black);
+#darknav {
+  background-color: var(--black);
 }
 
-
-@media screen and (max-width:428px){
-  .navbar {
+@media screen and (max-width: 428px) {
+  .navbarTitle {
     font-family: "Lostar";
     text-align: center;
     font-size: 60px;
@@ -101,23 +107,26 @@ body {
     background-color: var(--vertfonce);
     margin-bottom: 20px;
     color: var(--white);
-}
-
-}
-@media screen and (max-width: 550px) {
-
-  .actu {
-    display: flex;
-    flex-direction: row;
-    width: 100%; 
-    justify-content:center;
   }
 }
-.visible{
+@media screen and (max-width: 750px) {
+  .actu {
+    display: block;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+  }
+}
+.visible {
   display: none;
 }
 
-.Welcome{
+.Welcome {
   text-align: center;
   color: var(--blackpurple);
   font-style: italic;

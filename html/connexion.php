@@ -17,7 +17,7 @@
 <body id="body">
 
   <a href="../index.php" class="text-decoration-none">
-    <div class="d-flex justify-content-center navbar">Music Chat</div>
+    <div class="d-flex justify-content-center navbarTitle">Music Chat</div>
   </a>
   <div>
     <div id="choix_formulaires">

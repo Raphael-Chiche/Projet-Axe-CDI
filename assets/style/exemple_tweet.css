@@ -11,7 +11,7 @@
   color: var(--vertfonce);
   border-top-left-radius: 0;
   margin-left: 5%;
-  /* width: 75vw; */
+  width: 75vw;
 }
 
 .imgprofil {
@@ -39,7 +39,7 @@
 .tweetStyle {
   display: flex;
   flex-direction: column;
-  width: 75vw;
+  /* width: 75vw; */
 }
 
 .contenueTweet {
@@ -146,4 +146,12 @@
     margin-left: 5%;
     /* width: 85vw; */
   }
+}
+
+@media screen and (max-width: 750px) {
+  .tweetStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 }

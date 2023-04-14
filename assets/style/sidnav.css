@@ -79,7 +79,7 @@
   background-color: rgb(40, 151, 18);
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 750px) {
   .sidebar {
     display: block;
     position: fixed;
