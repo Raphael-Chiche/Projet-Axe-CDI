@@ -19,6 +19,8 @@ const pop = document.getElementsByClassName("chatPop");
 const funk = document.getElementsByClassName("chatFunk");
 const tweet = document.getElementsByClassName("tweet");
 
+const clickSidNav = document.querySelector(".sidenavCategories");
+
 const clickRapSidenav = document.querySelector(".Rap.sidenavCategories");
 const clickKpopSidenav = document.querySelector(".Kpop.sidenavCategories");
 const clickClassiqueSidenav = document.querySelector(".Classique.sidenavCategories");
@@ -29,14 +31,19 @@ const clickMetalSidenav = document.querySelector(".Metal.sidenavCategories");
 const clickPopSidenav = document.querySelector(".Pop.sidenavCategories");
 const clickFunkSidenav = document.querySelector(".Funk.sidenavCategories");
 
-// let autreCategorieRapSidenav = false;
+const txtRap = document.querySelector(".txtRap");
 
+// let autreCategorieRapSidenav = false;
+// condition / rep1 rep 2
 let autreCategorieRap = false;
 
 [clickRap, clickRapSidenav].forEach(function (elementRap) {
+
   //tableau
   elementRap.addEventListener("click", function () {
     autreCategorieRap = !autreCategorieRap;
+    txtRap.style.background = autreCategorieRap ? "red" : "none";
+    txtRap.style.transition = autreCategorieRap ? " 1s" : "none";
     for (let i = 0; i < kpop.length; i++) {
       kpop[i].style.display = autreCategorieRap ? "none" : "flex";
     }
@@ -62,6 +69,9 @@ let autreCategorieRap = false;
       funk[i].style.display = autreCategorieRap ? "none" : "flex";
     }
   });
+
+
+
 });
 
 let autreCategoriekpop = false;

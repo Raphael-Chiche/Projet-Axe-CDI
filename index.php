@@ -99,7 +99,7 @@
                 echo "<img src='assets/imgTweet/" . $chat['image'] . "' alt='Image Tweet' class='sizeImg'>";
               } ?>
 
-              <div style="display:flex;">
+              <div style="display:flex; justify-content: space-between;">
                 <span>
                   <?php echo $chat["date"]; ?>
 
@@ -148,7 +148,7 @@
           <h3 style="color: var(--blackpurple)">Catégories</h3>
           <div class="Rap">
             <div class="boxs cat1"></div>
-            <p>Rap</p>
+            <p class="txtRap">Rap</p>
           </div>
 
           <div class="Kpop">
@@ -196,7 +196,7 @@
             <p>Country</p>
           </div>
 
-          <div class="reset formeInfo styleRestart">
+          <div class="reset formeInfo styleRestart resetbt">
             <img src="assets/image/reset.png" alt="Reset" />
             <p class="reset">Restart</p>
           </div>
@@ -375,7 +375,7 @@
     </div>
 
     <!-- <script src="assets/javascript/java.js"></script> -->
-    <script src="assets/javascript/categorie.js"></script>
+    <script src="assets/javascript/categoriesTest.js"></script>
     <script src="assets/javascript/popup.js"></script>
     <script src="assets/javascript/sidnav.js"></script>
     <script src="assets/javascript/supprimerChat.js"></script>

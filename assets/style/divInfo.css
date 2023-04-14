@@ -30,7 +30,7 @@
 .navClick{
   display:block;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .divInfo {
     border: var(--blackpurple) solid 3px;
     margin: 5px;

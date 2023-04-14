@@ -23,12 +23,14 @@ a {
 :root {
   --blue: #1e90ff;
   --white: #ffffff;
+  --backgroundcolortag:#ffffff;
   --vertfonce: #182d0e;
   --vertclaire: #c8d7c6;
   --blackpurple: #1c1018;
   --taupe: #bfacb5;
   --bleutravail: #5c6784;
   --black: #000000;
+  --cat1 : #ffadad;
 }
 
 @font-face {
@@ -38,7 +40,6 @@ a {
 
 body {
   background-color: #c8d7c6;
-  overflow-x: hidden;
 }
 
 .actu {
@@ -74,6 +75,7 @@ body {
   margin-bottom: 20px;
   color: var(--white);
 }
+
 .navbar {
   display: flex;
   justify-content: space-evenly;
@@ -98,6 +100,10 @@ body {
   background-color: var(--black);
 }
 
+.center{
+  display: flex;
+  align-items: center;
+}
 @media screen and (max-width: 428px) {
   .navbarTitle {
     font-family: "Lostar";
@@ -109,7 +115,7 @@ body {
     color: var(--white);
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .actu {
     display: block;
     flex-direction: row;
@@ -130,4 +136,20 @@ body {
   text-align: center;
   color: var(--blackpurple);
   font-style: italic;
+}
+
+.navbarTitle {
+  text-decoration: none;
+  background: linear-gradient(
+      to top,
+      rgba(255, 0, 0, 0.5) 0%,
+      rgba(255, 0, 0, 0.5) 100%,
+      transparent 10.01%
+    )
+    no-repeat left bottom / 0% 100%;
+  transition: background-size 0.5s;
+}
+
+.navbarTitle:hover {
+  background-size: 100% 100%;
 }

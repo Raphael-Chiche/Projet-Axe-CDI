@@ -6,6 +6,7 @@ const btnNotif = document.querySelector("#idNotification");
 
 const themes = document.querySelector(".parametreTheme");
 const btnchoix = document.querySelector("#idChoixTheme");
+const center = document.querySelector(".center");
 
 
 
@@ -29,10 +30,12 @@ btnCompte.addEventListener("click", function () {
   estVisibleCompte = !estVisibleCompte; // true -> false et vice versa
 
   votreCompte.style.display = estVisibleCompte ? "flex" : "none"; // si c'est true, alors c'est none sinon c'est flex
+  votreCompte.style.display = estVisibleCompte ? "flex" : "none"; // si c'est true, alors c'est none sinon c'est flex
 
   if (votreCompte.style.display == "flex") {
     notification.style.display = "none";
     themes.style.display = "none";
+    votreCompte.classList.add(center);
   }
 });
 

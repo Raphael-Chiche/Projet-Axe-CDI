@@ -35,7 +35,7 @@ ol {
 
 .div_tag {
   border-radius: 21px;
-  background: var(--white);
+  background: var(--backgroundcolortag);
   border: var(--blackpurple) solid 1px;
   display: flex;
   flex-direction: column;
@@ -81,9 +81,10 @@ ol {
   padding-left: 40px;
   padding-right: 40px;
   height: 20px;
+  
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .div_tag {
     border-radius: 21px;
     background: var(--white);
@@ -101,3 +102,16 @@ ol {
     border-top-left-radius: 0;
   }
 }
+
+/* @media screen and (max-width: 850px ) {
+  .tagRestart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: sticky;
+    top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    height: 20px;
+  }
+} */

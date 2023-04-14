@@ -27,7 +27,8 @@
 }
 
 .sizeImg {
-  max-width: 45vw;
+  width: 100%;
+
 }
 
 .infoTexte {
@@ -148,7 +149,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 850px) {
   .tweetStyle {
     display: flex;
     flex-direction: column;
