@@ -5,70 +5,356 @@
   margin: 5px;
 }
 
+.ResetCat {
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--vertfonce);
+  color: var(--white);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+}
 .Rap {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat1);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Kpop {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat2);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Classique {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat3);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Electro {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat4);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Jazz {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat5);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Rock {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat6);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Metal {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat7);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Pop {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat8);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Funk {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat9);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
 }
 
 .Country {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  padding: 12px 24px;
+  border: none;
+  background-color: var(--cat10);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 15px;
+  border-radius: 25px;
+  border-top-left-radius: 0px;
+}
+
+.Rap:hover {
+  animation: KeyframeRap 1s;
+}
+
+@keyframes KeyframeRap {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Kpop:hover {
+  animation: KeyframeKpop 1s;
+}
+
+@keyframes KeyframeKpop {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Classique:hover {
+  animation: KeyframeClassique 1s;
+}
+
+@keyframes KeyframeClassique {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Electro:hover {
+  animation: KeyframeElectro 1s;
+}
+
+@keyframes KeyframeElectro {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Jazz:hover {
+  animation: KeyframeJazz 1s;
+}
+
+@keyframes KeyframeJazz {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Rock:hover {
+  animation: KeyframeRock 1s;
+}
+
+@keyframes KeyframeRock {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Metal:hover {
+  animation: KeyframeMetal 1s;
+}
+
+@keyframes KeyframeMetal {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Pop:hover {
+  animation: KeyframePop 1s;
+}
+
+@keyframes KeyframePop {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Funk:hover {
+  animation: KeyframeFunk 1s;
+}
+
+@keyframes KeyframeFunk {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
+}
+
+.Country:hover {
+  animation: KeyframeCountry 1s;
+}
+
+@keyframes KeyframeCountry {
+  from {
+    font-size: 19px;
+  }
+  to {
+    font-size: 30px;
+  }
 }
 @media screen and (max-height: 680px) {
   .boxs {
     width: 30px;
     padding: 27px 0 0 0;
     border-radius: 50%;
+    margin: 5px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .Rap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Kpop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Classique {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Electro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Jazz {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Rock {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Metal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Pop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Funk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px;
+  }
+
+  .Country {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     margin: 5px;
   }
 }

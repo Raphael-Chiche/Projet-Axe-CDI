@@ -1,5 +1,3 @@
-const btnSombre = document.querySelector("#btnSombre");
-const btnClaire = document.querySelector("#btnClaire");
 const styleNavbar = document.querySelector(".navbar");
 const styleNavbartitle = document.querySelector(".navbarTitle");
 
@@ -22,6 +20,3 @@ if (theme === "black") {
   styleNavbar.style.backgroundColor = "#000000";
   styleNavbartitle.style.backgroundColor ="black";
 }
-
-
-//---------------------------------------------------------

@@ -23,5 +23,20 @@ if (theme === "black") {
   styleNavbartitle.style.backgroundColor ="black";
 }
 
+btnClaire.addEventListener("click", () => {
+  localStorage.setItem("actual_theme", "white");
+  body.style.backgroundColor = "#c8d7c6";
+  styleNavbar.style.backgroundColor = "#182d0e";
+  styleNavbartitle.style.backgroundColor = "#182d0e";
+  console.log("white");
+});
+
+btnSombre.addEventListener("click", () => {
+  localStorage.setItem("actual_theme", "black");
+  body.style.backgroundColor = "#182d0e";
+  styleNavbar.style.backgroundColor = "#000000";
+  styleNavbartitle.style.backgroundColor ="black";
+  console.log("dark");
+});
 
 //---------------------------------------------------------

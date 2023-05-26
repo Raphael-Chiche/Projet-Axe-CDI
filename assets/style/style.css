@@ -4,7 +4,6 @@
 @import url(divInfo.css);
 @import url(categories.css);
 @import url(popup.css);
-@import url(flouScroll.css);
 @import url(sidnav.css);
 @import url(supprimerChat.css);
 @import url(connexion.css);
@@ -31,11 +30,20 @@ a {
   --bleutravail: #5c6784;
   --black: #000000;
   --cat1 : #ffadad;
+  --cat2 : #ffd6a5;
+  --cat3 : #fdffb6;
+  --cat4 : #caffbf;
+  --cat5 : rgb(179, 179, 0);
+  --cat6 : pink;
+  --cat7 : #a0c4ff;
+  --cat8 : rgb(201, 48, 168);
+  --cat9 : #9bf6ff;
+  --cat10: grey;
 }
 
 @font-face {
-  font-family: "lostar";
-  src: url(‘../font/lostar/Lostar.ttf’);
+  font-family: "Lostar";
+  src: url("../font/lostar/Lostar.ttf");
 }
 
 body {
@@ -44,10 +52,11 @@ body {
 
 .actu {
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   width: 100%;
   justify-content: space-between;
   padding-top: 10px;
+  align-items: center;
 }
 
 .parametre {
@@ -73,13 +82,26 @@ body {
   font-style: italic;
   background-color: var(--vertfonce);
   margin-bottom: 20px;
-  color: var(--white);
+  color: var(--backgroundcolortag);
+  animation:Keyframe1 1.5s;
 }
 
+
+@keyframes Keyframe1 {
+  from {
+    font-size: 0px;
+  }
+  
+
+  to {
+    font-size: 80px;
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  background-color: var(--vertfonce);
 }
 
 .flexcolonne {
@@ -138,7 +160,7 @@ body {
   font-style: italic;
 }
 
-.navbarTitle {
+/* .navbarTitle {
   text-decoration: none;
   background: linear-gradient(
       to top,
@@ -152,4 +174,14 @@ body {
 
 .navbarTitle:hover {
   background-size: 100% 100%;
+} */
+
+.infoID{
+  display:flex;
+  justify-content: space-between;
+}
+
+.displayEnvoyer{
+  display: flex; 
+  justify-content: center;
 }

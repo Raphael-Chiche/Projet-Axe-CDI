@@ -13,6 +13,7 @@ if ($_POST["password"] != "" && $_POST["email"] != "") {
     $recuperationUser = $database->prepare('SELECT * FROM users WHERE mail = ?');
     $recuperationUser->execute(array($data["mail"]));
     $userDonnees = $recuperationUser->fetchAll(PDO::FETCH_ASSOC);
+    //Retourne le resultat sous forme de tableau     
 
     if ($userDonnees != null) {
         $mdpUser = $userDonnees[0]["password"];

@@ -4,3 +4,9 @@
 #inscriptionDisplay{
     display: none;
 }
+
+.btnEnvoyerConnexion{
+    border-radius: 50px;
+    font-family: 'Lostar';
+    border-top-left-radius: 0px
+}

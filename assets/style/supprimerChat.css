@@ -38,7 +38,6 @@
     cursor: pointer;
     border-radius: 30px;
     background-color: rgb(153, 16, 16);
-    /* background: linear-gradient(45deg, rgb(177, 13, 13), rgb(134, 7, 7)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +47,6 @@
   }
   
   .annulerDelete:hover {
-    /* background: linear-gradient(45deg,var(--black),var(--black)); */
     background-color: var(--black);
   
   }
@@ -59,7 +57,6 @@
     cursor: pointer;
     border-radius: 30px;
     background-color: rgb(16, 153, 57);
-    /* background: linear-gradient(45deg, rgb(24, 99, 5), rgb(8, 185, 52)); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +66,6 @@
   }
   
   .validerDelete:hover {
-      /* background:linear-gradient(45deg,rgb(35, 199, 35),rgb(120, 219, 120)); */
       background-color: rgb(0, 85, 0);
       
     }

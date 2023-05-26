@@ -10,7 +10,6 @@
   display: flex;
   color: var(--vertfonce);
   border-top-left-radius: 0;
-  margin-left: 5%;
   width: 75vw;
 }
 
@@ -72,19 +71,19 @@
 }
 
 .chatKpop .boxsChat {
-  background-color: #ffd6a5;
+  background-color: rgb(255, 214, 165);
   width: 100px;
   height: 100px;
 }
 
 .chatClassique .boxsChat {
-  background-color: #fdffb6;
+  background-color: rgb(253, 255, 182);
   width: 100px;
   height: 100px;
 }
 
 .chatElectro .boxsChat {
-  background-color: #caffbf;
+  background-color: rgb(202, 255, 191);
   width: 100px;
   height: 100px;
 }
@@ -96,13 +95,13 @@
 }
 
 .chatRock .boxsChat {
-  background-color: pink;
+  background-color: rgb(255, 192, 203);
   width: 100px;
   height: 100px;
 }
 
 .chatMetal .boxsChat {
-  background-color: #a0c4ff;
+  background-color: rgb(160, 196, 255);
   width: 100px;
   height: 100px;
 }
@@ -114,11 +113,16 @@
 }
 
 .chatFunk .boxsChat {
-  background-color: #9bf6ff;
+  background-color: rgb(155, 246, 255);
   width: 100px;
   height: 100px;
 }
 
+.chatCountry .boxsChat {
+  background-color: gray;
+  width: 100px;
+  height: 100px;
+}
 .contenu {
   height: 15vw;
   width: 30vw;
@@ -144,7 +148,6 @@
     display: flex;
     color: var(--vertfonce);
     border-top-left-radius: 0;
-    margin-left: 5%;
     /* width: 85vw; */
   }
 }

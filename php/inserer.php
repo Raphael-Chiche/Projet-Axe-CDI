@@ -6,7 +6,7 @@
         if(isset($_FILES['image'])) {
 
             $image = $_FILES['image']['name'];
-            $file_tmp = $_FILES['image']['tmp_name'];
+            $file_tmp = $_FILES['image']['tmp_name']; //nom de l'extension
             $imgSize = $_FILES["image"]["size"];
 
             if ($imgSize > 1000000){ 
