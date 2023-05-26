@@ -10,9 +10,16 @@
     flex-direction: column;
     justify-content: center;
     z-index: 5;
-    
+    animation: PopupAnim 0.5    s;
   }
-
+  @keyframes PopupAnim {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity:100% ; 
+   }
+  }
 .txtPopupCo{
     border: rgb(0, 0, 0) solid 2px;
     background-color: white;

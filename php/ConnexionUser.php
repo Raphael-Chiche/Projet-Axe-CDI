@@ -5,7 +5,7 @@ session_start();
 
 if ($_POST["password"] != "" && $_POST["email"] != "") {
     $data = [
-        "password" => $_POST["password"],
+        "password" => $_POST["password"], //passwordConnexion
         "mail" => $_POST["email"]
     ];
 

@@ -30,6 +30,7 @@
   transition: all 0.3s ease-in-out;
 }
 
+/* nth-child : ici on prend le premier span sur les 3 et ainsi de suite */
 .sidebar .toggle-btn span:nth-child(1) {
   top: 10%;
 }
@@ -58,7 +59,10 @@
 }
 
 .sidenavCategorie {
+  display: grid;
+  justify-content: start;
   border-bottom: 1px solid rgba(255, 255, 255, 0.623);
+  justify-items: start;
 }
 
 .sidenavCategories {
@@ -91,6 +95,4 @@
     transition: all 0.3s ease-in-out;
     color: white;
   }
-
-
 }

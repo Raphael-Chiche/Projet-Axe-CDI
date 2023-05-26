@@ -1,11 +1,7 @@
 .tweet {
   border: var(--blackpurple) solid 1px;
   border-radius: 20px;
-  /* width: 100%; */
   margin: 7px;
-  /* margin-right: 20px;
-    margin-left: 20px;
-    padding: 10px;  559e52*/
   background-color: var(--white);
   display: flex;
   color: var(--vertfonce);
@@ -39,14 +35,12 @@
 .tweetStyle {
   display: flex;
   flex-direction: column;
-  /* width: 75vw; */
 }
 
 .contenueTweet {
   word-break: break-all;
   margin: 10px;
   color: var(--bleutravail);
-  /* border-left: black solid 3px; */
   display: flex;
   flex-direction: column;
 
@@ -131,24 +125,76 @@
   margin-top: 5%;
   border-radius: 10px;
 }
-@media screen and (max-width: 911px) {
-  .info {
-    display: block;
-    margin: 10px;
-  }
-}
 
 @media screen and (max-width: 420px) {
   .tweet {
     border: var(--blackpurple) solid 1px;
     border-radius: 20px;
-    /* width: 100%; */
     margin: 7px;
     background-color: var(--white);
-    display: flex;
+    display: grid;
     color: var(--vertfonce);
     border-top-left-radius: 0;
-    /* width: 85vw; */
+  }
+
+  .chatRap .boxsChat {
+    background-color: #ffadad;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatKpop .boxsChat {
+    background-color: rgb(255, 214, 165);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatClassique .boxsChat {
+    background-color: rgb(253, 255, 182);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatElectro .boxsChat {
+    background-color: rgb(202, 255, 191);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatJazz .boxsChat {
+    background-color: rgb(179, 179, 0);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatRock .boxsChat {
+    background-color: rgb(255, 192, 203);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatMetal .boxsChat {
+    background-color: rgb(160, 196, 255);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatPop .boxsChat {
+    background-color: rgb(201, 48, 168);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatFunk .boxsChat {
+    background-color: rgb(155, 246, 255);
+    width: 50px;
+    height: 50px;
+  }
+  
+  .chatCountry .boxsChat {
+    background-color: gray;
+    width: 50px;
+    height: 50px;
   }
 }
 

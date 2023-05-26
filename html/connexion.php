@@ -52,12 +52,12 @@
         <form method="POST" action="../php/ConnexionUser.php">
           <div class="mb-2">
             <label  class="form-label">Adresse mail</label>
-            <input type="email" class="form-control" id="mail"  name="email" />
+            <input type="email" class="form-control"   name="email" />
           </div>
 
           <div class="mb-2">
             <label  class="form-label">Mot de passse</label>
-            <input type="password" class="form-control" id="password" name="password" />
+            <input type="password" class="form-control" name="password" />
           </div>
 
           <button type="submit" name="SendCo" class="btnEnvoyerConnexion btn btn-primary">Envoyer</button>
@@ -68,20 +68,20 @@
         <br/>
         <form action="../php/InscriptionUser.php" method="POST">
           <div class="mb-3">
-            <label for="pseudo" class="form-label">Pseudo</label>
-            <input type="text" class="form-control" name="pseudo" id="pseudo" />
+            <label class="form-label">Pseudo</label>
+            <input type="text" class="form-control" name="pseudo"/>
           </div>
 
 
           <div class="mb-3">
-            <label for="mail" class="form-label">Adresse mail</label>
-            <input type="email" class="form-control" name="mail" id="mail"/>
+            <label class="form-label">Adresse mail</label>
+            <input type="email" class="form-control" name="mail" />
           </div>
 
 
 
           <div class="mb-3">
-            <label for="password" class="form-label">Mot de passse</label>
+            <label class="form-label">Mot de passse</label>
             <input type="password" class="form-control" name="password" id="password" />
           </div>
           <button type="submit" name="SendInsc" class="btnEnvoyerConnexion btn btn-primary">Envoyer</button>

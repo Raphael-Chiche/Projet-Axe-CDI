@@ -56,7 +56,7 @@
     <button class="floating-btn">
       <img src="assets/image/plus.png" alt="Pop-up" />
     </button>
-
+      <!-- On crée les tweets  ici -->
     <article class="actu">
       <?php
       require_once "php/connec.php";
@@ -66,7 +66,7 @@
       $requete->execute();
       $chats = $requete->fetchAll(PDO::FETCH_ASSOC);
       ?>
-      <div class="tweetStyle">
+      <article class="tweetStyle">
 
 
         <?php foreach ($chats as $chat) { ?>
@@ -127,7 +127,7 @@
           <?php
         }
         ?>
-      </div>
+      </article>
 
       <div class="tagRestart">
 
@@ -281,7 +281,7 @@
 
 
 
-
+            <div>
     <div class="sidebar">
       <div class="toggle-btn">
         <span></span>
@@ -386,7 +386,7 @@
         <p class="reset">Restart</p>
       </div> -->
     </div>
-
+    </div>
     <!-- <script src="assets/javascript/java.js"></script> -->
     <script src="assets/javascript/categoriesTest.js"></script>
     <script src="assets/javascript/sidnav.js"></script>

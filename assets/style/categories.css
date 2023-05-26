@@ -289,6 +289,7 @@
 
 @media screen and (max-width: 850px) {
   .Rap {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -296,6 +297,7 @@
   }
 
   .Kpop {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -303,6 +305,7 @@
   }
 
   .Classique {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -310,6 +313,7 @@
   }
 
   .Electro {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -317,6 +321,7 @@
   }
 
   .Jazz {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -324,6 +329,7 @@
   }
 
   .Rock {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -331,6 +337,7 @@
   }
 
   .Metal {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -338,6 +345,7 @@
   }
 
   .Pop {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -345,6 +353,7 @@
   }
 
   .Funk {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -352,6 +361,7 @@
   }
 
   .Country {
+    padding: 4px 24px;
     display: flex;
     flex-direction: row;
     align-items: center;
