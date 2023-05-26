@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : mer. 17 mai 2023 à 19:36
+-- Généré le : ven. 26 mai 2023 à 19:24
 -- Version du serveur : 8.0.30
 -- Version de PHP : 8.1.10
 
@@ -42,39 +42,19 @@ CREATE TABLE `chats` (
 --
 
 INSERT INTO `chats` (`id`, `userId`, `contenu`, `date`, `theme`, `image`, `pseudoChat`) VALUES
-(51, 17, 'a', '2023-04-12 21:53:26', 'chatMetal', '', 'a'),
-(52, 17, 'a', '2023-04-12 21:53:31', 'chatMetal', '', 'a'),
-(53, 17, 'a', '2023-04-12 21:53:35', 'chatJazz', '', 'a'),
-(54, 17, 'a', '2023-04-12 21:53:40', 'chatRap', '', 'a'),
-(55, 17, 'a', '2023-04-12 21:53:45', 'chatPop', '', 'a'),
 (56, 18, 'b', '2023-04-12 21:54:26', 'chatFunk', '', 'b'),
 (58, 18, 'ddddddddddddddddddddddddddddddddddddddddddddddddddddd hjggg    hjhgjhgkgjhgkkjhg', '2023-04-12 22:21:48', 'chatElectro', '', 'b'),
-(59, 18, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the ', '2023-04-12 22:30:47', '', '', 'b'),
 (60, 17, 'a', '2023-04-13 11:13:48', 'chatMetal', '', 'a'),
 (61, 17, 'aaa', '2023-04-13 11:13:55', 'chatRock', '', 'a'),
 (64, 17, 'sdfsd', '2023-04-13 11:47:17', 'chatMetal', 'Monkey_Mother.png', 'a'),
-(66, 19, 'azdqsdqsdezaazd', '2023-04-13 13:46:10', 'chatFunk', '', 'scarfacedugetho'),
 (67, 17, 'gherfe', '2023-04-14 11:46:50', 'chatPop', '', 'a'),
 (68, 17, 'gherfe', '2023-04-14 11:48:28', 'chatMetal', '', 'a'),
-(70, 17, 'gherfegdssdgdgs', '2023-04-14 12:42:33', 'chatJazz', '1183004.jpg', 'a'),
-(71, 17, 'gherfegds', '2023-04-14 12:45:09', 'chatRock', '', 'a'),
-(72, 17, 'gherfegdsdfg', '2023-04-14 12:49:56', 'chatRock', '', 'a'),
-(73, 17, 'dfgdfgqsd', '2023-04-14 14:46:10', 'chatRap', '', 'a'),
 (74, 20, 'ça tchat ou quoi l\'équipe #cool', '2023-04-17 11:54:11', 'chatRock', 'photo_1625062095.jpg', 'erwan'),
-(76, 17, 'dfsgdfgdgf', '2023-04-27 08:47:59', 'chatMetal', 'perso rouge.png', 'a'),
-(77, 17, 'qsdqsd', '2023-04-27 08:49:16', 'chatRock', 'Capture d’écran 2023-04-05 103815.png', 'a'),
-(78, 17, 'qsdqxdqsdf', '2023-05-03 11:48:12', 'chatRap', '', 'a'),
-(79, 17, 'sdfdsfds', '2023-05-03 11:50:06', 'chatClassique', '', 'a'),
-(80, 17, 'sqdqsd', '2023-05-03 11:52:00', 'chatPop', '', 'a'),
-(81, 17, 'qsd', '2023-05-12 12:13:18', 'chatFunk', '', 'a'),
-(82, 17, 'rap', '2023-05-12 12:16:41', 'chatRap', '', 'a'),
-(83, 17, 'eletro', '2023-05-12 12:17:25', 'chatElectro', '', 'a'),
-(84, 17, 'rap', '2023-05-15 12:42:42', 'chatRap', '', 'a'),
-(85, 17, 'coucou', '2023-05-15 12:43:05', 'chatClassique', '', 'a'),
-(86, 17, 'metal', '2023-05-15 12:43:29', 'chatMetal', '', 'a'),
-(87, 17, 'rap', '2023-05-15 15:20:01', 'chatRap', '', 'a'),
-(88, 17, 'funk', '2023-05-15 15:20:13', 'chatFunk', '', 'a'),
-(89, 22, 'qsd', '2023-05-17 15:52:02', 'chatPop', '', '123');
+(89, 22, 'qsd', '2023-05-17 15:52:02', 'chatPop', '', '123'),
+(92, 23, 'kjhg', '2023-05-22 16:09:15', 'chatFunk', '', 'nico'),
+(93, 23, 'lkjhg', '2023-05-22 16:10:12', 'chatPop', 'istockphoto-544814906-170667a.jpg', 'nico'),
+(105, 27, 'j\'adore la kpop', '2023-05-26 09:20:20', 'chatKpop', 'Monkey_Mother.png', 'KraKeN'),
+(106, 17, 'dzzed', '2023-05-26 14:24:14', 'chatMetal', 'Monkey_Mother.png', 'a');
 
 -- --------------------------------------------------------
 
@@ -114,7 +94,14 @@ INSERT INTO `users` (`id`, `mail`, `password`, `pseudo`) VALUES
 (19, 'scarfacedugetho@desbarre.com', '$2y$10$heoopn5bll/dBJFqm44Bp.ySvEWri6UmulYdlqMBfstBOEWINsdVy', 'scarfacedugetho'),
 (20, 'Chiche@erwan', '$2y$10$WC39Ry4phwiF0JtcERd5FeeZMrOI/YZ2RdedssB96Bk8i4Vb83Ou6', 'erwan'),
 (21, 'Chiche@kistou', '$2y$10$Wl7BSsze3qIOExey3RBx5.RpKrT/YQmjND/u0NeEt2CphuggBdhHe', 'kitsou'),
-(22, 'Chiche@az', '$2y$10$xN2yUor85W6osCXlQH9BauKxOj.8S26IbLgHv3o/.mcfDfm9ZCP2O', '123');
+(22, 'Chiche@az', '$2y$10$xN2yUor85W6osCXlQH9BauKxOj.8S26IbLgHv3o/.mcfDfm9ZCP2O', '123'),
+(23, 'n@n', '$2y$10$mIz30VubFhp9jt9Km8oVvu8Y2CcDmLDJLU10b9mUomltilZmxndpu', 'nico'),
+(24, 'Chiche@e', '$2y$10$wkgjRYN/m1taK9ocQSYB4O72uwRqLe0ti0VDnU/dX9by.foOlpvli', 'e'),
+(25, 'a@chile', '$2y$10$xlngFOGhLcAFWmFJWfDWE.BAxBvTyiJyW4Hr4papWqc2hTCNbcqpm', 'Achile'),
+(26, 'Chiche@s', '$2y$10$3aTRCoDwUah7NakSj8JlvuZ78PDKeT2H7xVY2TPDcHA4mffv6PFhu', 'sqd'),
+(27, 'baton@gmail.com', '$2y$10$HNNIJjIonR8G6ff76dws1eASjHMof9CwSW9OIPKfJMVPEgKSZN.CW', 'KraKeN'),
+(28, 'Chiche@test1', '$2y$10$edY5g4BFpuzI.EZhzS08AONv9BaV.fLZWoQMi37IgKH6iFYuBU9RC', 'test1'),
+(29, 'Chiche@test2', '$2y$10$sUuPHvwypGc8Hidl0xwfve0QkM7EJQMAXcJC5FC415MPiCsSsM5ui', 'Test2');
 
 --
 -- Index pour les tables déchargées
@@ -140,13 +127,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `chats`
 --
 ALTER TABLE `chats`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

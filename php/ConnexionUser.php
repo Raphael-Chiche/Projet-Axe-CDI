@@ -5,7 +5,8 @@ session_start();
 
 if ($_POST["password"] != "" && $_POST["email"] != "") {
     $data = [
-        "password" => $_POST["password"], //passwordConnexion
+        // recupere password et le mail 
+        "password" => $_POST["password"],
         "mail" => $_POST["email"]
     ];
 

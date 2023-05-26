@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     z-index: 5;
-    animation: PopupAnim 0.5    s;
+    animation: PopupAnim 0.5s;
   }
   @keyframes PopupAnim {
     from {

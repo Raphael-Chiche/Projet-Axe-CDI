@@ -23,7 +23,7 @@ function Categories(chatCategorie) {
     const categoriesTweet = document.querySelectorAll(".tweet"); 
 
     categoriesTweet.forEach(function (cat) {
-      let tag = cat.getAttribute('catTweet')
+      let tag = cat.getAttribute('data-categorie')
       cat.style.display = tag != chatCategorie ? "none" : "flex" 
     });
 }

@@ -1,13 +1,14 @@
 <?php 
     require_once "connec.php"; 
     session_start();
+    // si le contenu est vide, on ne lance rien
     if( $_POST["contenu"]!=""){
         
         if(isset($_FILES['image'])) {
 
             $image = $_FILES['image']['name'];
             $file_tmp = $_FILES['image']['tmp_name']; //nom de l'extension
-            $imgSize = $_FILES["image"]["size"];
+            $imgSize = $_FILES["image"]["size"]; //taille de l'image
 
             if ($imgSize > 1000000){ 
                 echo "La taille de l'image est trop grande";
